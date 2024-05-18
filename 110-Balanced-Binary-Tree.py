@@ -32,3 +32,10 @@ if __name__ == "__main__":
 
     # Check if the tree is height-balanced
     print(solution.isBalanced(root))  # Output: True
+
+    root = TreeNode(1)
+    root.left = TreeNode(2, TreeNode(2, TreeNode(3), TreeNode(3)),
+                         TreeNode(3, TreeNode(4), TreeNode(4)))
+    root.right = TreeNode(2)
+
+    print(solution.isBalanced(root))
