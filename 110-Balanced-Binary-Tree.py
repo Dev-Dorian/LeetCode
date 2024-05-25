@@ -26,6 +26,13 @@ class Solution():
 if __name__ == "__main__":
     solution = Solution()
 
+    # Constructing the tree from the example
+#       3
+#      / \
+#     9  20
+#       /  \
+#      15   7
+
     root = TreeNode(3)
     root.left = TreeNode(9)
     root.right = TreeNode(20, TreeNode(15), TreeNode(7))
