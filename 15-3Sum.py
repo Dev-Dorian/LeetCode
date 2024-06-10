@@ -1,4 +1,4 @@
-def treeSum(nums):
+def threeSum(nums):
     if len(nums) < 3:
         return []
     ans = []
@@ -25,4 +25,4 @@ def treeSum(nums):
     return ans
 
 
-print(treeSum([-1, 0, 1, 2, -1, -4]))
+print(threeSum([-1, 0, 1, 2, -1, -4]))
