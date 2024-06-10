@@ -1,8 +1,9 @@
 
 
 def palindrome(word):
+    word = str(word)
     inverse = word[::-1]
     return inverse == word
 
 
-print(palindrome("anaa"))
+print(palindrome("10"))
