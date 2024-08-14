@@ -24,4 +24,4 @@ def ValidAnagram1(s, t):
     return True
 
 
-print(ValidAnagram1("RoMa", "orma"))
+print(ValidAnagram1("RoMa", "oram"))
