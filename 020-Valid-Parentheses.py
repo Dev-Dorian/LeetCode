@@ -16,8 +16,33 @@ def validParentheses(cadena):
     return len(pila) == 0
 
 
-print(validParentheses('([{})'))
+# print(validParentheses('())'))
 
+def getMin(s):
+    # Write your code here
+    ls = len(s)
+    stack = []
+    data = [0] * ls
+    for i in range(ls):
+        curr = s[i]
+        if curr == '(':
+            stack.append(i)
+        else:
+            if len(stack) > 0:
+                data[i] = 1
+                data[stack.pop(-1)] = 1
+    tep, res = 0, 0
+    for t in data:
+        if t == 1:
+            tep += 1
+        else:
+            res = max(tep, res)
+            tep = 0
+    return max(tep, res)
+
+
+print(getMin("()("))
+"""
 stack = [3, 4, 5]
 stack.append(6)
 stack.append(7)
@@ -50,3 +75,4 @@ def funcExpresion():
 
 
 funcExpresion()
+"""
