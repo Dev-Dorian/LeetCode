@@ -14,4 +14,12 @@ def two_sum(nums, target):
     return solution
 
 
-print(two_sum([1, 1, 3], 5))
+def two_sum_1(nums, target):
+    for start in range(len(nums)):
+        for end in range(start + 1, len(nums)):
+            if nums[start] + nums[end] == target:
+                return [start, end]
+
+
+print(two_sum([2, 7, 11, 15], 9))
+print(two_sum_1([2, 7, 11, 15], 9))
