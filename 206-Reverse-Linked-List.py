@@ -15,7 +15,7 @@ class Solution:
     def reverseList(self, head):
         current = head
         prev = None
-
+        # current is not None es lo mismo que solo dejar current
         while current is not None:  # !=
             nextNode = current.next
             current.next = prev

@@ -1,12 +1,10 @@
 def occurrence(haystack, needle):
-    if needle == "":
-        return 0
-    for i in range(len(haystack) + 1 - len(needle)):
-        if haystack[i: i + len(needle)] == needle:
-            return i
-        return -1
+    if needle in haystack:
+        return haystack.index(needle)
+    else:
+        return (-1)
 
 
-haystack = "sadbutsad"
-needle = "sad"
+haystack = "hello"
+needle = "ll"
 print(occurrence(haystack, needle))
