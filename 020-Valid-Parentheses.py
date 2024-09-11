@@ -10,13 +10,14 @@ def validParentheses(cadena):
         if c in parentheses:
             pila.append(c)
         # elif len(pila) == 0 or c != parentheses[pila.pop()]:
-            print(pila.append(c), c, parentheses[pila.pop()])
+            # print(pila.append(c), c, parentheses[pila.pop()])
         elif not pila or c != parentheses[pila.pop()]:
             return False
     return len(pila) == 0
 
 
-# print(validParentheses('())'))
+print(validParentheses('())'))
+
 
 def getMin(s):
     # Write your code here
