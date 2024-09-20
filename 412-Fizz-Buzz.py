@@ -12,7 +12,7 @@ def fizzBuzz(n):
     return array
 
 
-print(fizzBuzz(15))
+print(fizzBuzz(10))
 
 
 def fizzBuzz1(n):
