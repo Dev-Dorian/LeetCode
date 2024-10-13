@@ -26,10 +26,9 @@ def minEatingSpeed1(piles, h):
     l, r = 1, max(piles)
     while l < r:
         k = l + (r - l) // 2
-
         hrs = 0
         for pile in piles:
-            hrs += math.ceil(pile / k)
+            hrs += pile / k
         if hrs <= h:
             r = k
         else:
@@ -38,7 +37,22 @@ def minEatingSpeed1(piles, h):
     return l
 
 
-piles = [30, 11, 23, 4, 20]
-h = 5
+def minEatingSpeed2(piles, h):
+    l, r = 1, max(piles)
+    while l < r:
+        k = l + (r - l) // 2
+        hrs = 0
+        for pile in piles:
+            hrs += pile / k + 1
+        if hrs <= h:
+            r = k
+        else:
+            l = k + 1
+
+    return l
+
+
+piles = [3, 6, 7, 11]
+h = 8
 
 print(minEatingSpeed1(piles, h))

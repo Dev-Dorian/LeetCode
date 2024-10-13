@@ -18,7 +18,8 @@ def expandAround(s, left, right):
     return s[left + 1:right]
 
 
-# print(palindromic("cbbd"))
+print(palindromic("ABC"))
+
 
 def longest(s):
     N = len(s)
@@ -44,4 +45,4 @@ def longest(s):
     return s[start:end]
 
 
-print(longest("cbbd"))
+print(longest("ABC"))

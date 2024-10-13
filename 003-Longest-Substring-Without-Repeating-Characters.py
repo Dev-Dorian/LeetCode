@@ -11,4 +11,4 @@ def lengthOfLongestSub(s):
     return ans
 
 
-print(lengthOfLongestSub("bbbbb"))
+print(lengthOfLongestSub("YABCCBAZ"))
