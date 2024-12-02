@@ -1,3 +1,5 @@
+# Algorithm Top-Down
+
 def fib(n):
     if n == 0:
         return 0
@@ -10,6 +12,8 @@ def fib(n):
     for index in range(2, n + 1):
         dp[index] = dp[index - 1] + dp[index - 2]
     return dp[n]
+
+# Algorithm Bottom-Up
 
 
 def fib1(n):
