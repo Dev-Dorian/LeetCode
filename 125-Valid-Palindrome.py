@@ -8,8 +8,9 @@ def isPalindrome(s):
             end -= 1
         if s[start].lower() != s[end].lower():
             return False
-        start, end = start + 1, end - 1
+        start = start + 1
+        end = end - 1
     return True
 
 
-print(isPalindrome("racecar"))
+print(isPalindrome("amatolo"))
