@@ -24,5 +24,19 @@ def longestSequence(nums):
     return max
 
 
+def longestSequence_1(nums):
+    mySet = set(nums)
+    ans = 0
+
+    for i in nums:
+        if not ((i-1) in mySet):
+            count = 0
+            while (i + count) in mySet:
+                count += 1
+            ans = max(ans, count)
+    return ans
+
+
 nums = [100, 4, 200, 1, 3, 2]
 print(longestSequence(nums))
+print(longestSequence_1(nums))
