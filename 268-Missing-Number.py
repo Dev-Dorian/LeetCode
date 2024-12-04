@@ -3,6 +3,7 @@ def missingNumber(nums):
 
     for i in range(len(nums)):
         res ^= i ^ nums[i]
+        print(res)
     return res
 
 
