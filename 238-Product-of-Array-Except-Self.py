@@ -9,5 +9,19 @@ def productArrayExceptSelf(nums):
     return ans
 
 
+def productArrayExceptSelf_1(nums):
+    ans = [1] * len(nums)
+    prefix = 1
+    for i in range(len(nums)):
+        ans[i] = prefix
+        prefix *= nums[i]
+    sufix = 1
+    for i in range(len(nums) - 1, -1, -1):
+        ans[i] *= sufix
+        sufix *= nums[i]
+    return ans
+
+
 nums = [1, 2, 3, 4]
 print(productArrayExceptSelf(nums))
+print(productArrayExceptSelf_1(nums))

@@ -23,6 +23,15 @@ class Solution:
             current = nextNode
         return prev
 
+    def reverseListRecursive(self, head):
+        if not head or not head.next:
+            return head
+        newHead = self.reverseListRecursive(head.next)
+        head.next.next = head
+        head.next = None
+
+        return newHead
+
 
 if __name__ == "__main__":
     head = ListNode(1)
@@ -31,3 +40,4 @@ if __name__ == "__main__":
     head.next.next.next = ListNode(4)
     head.next.next.next.next = ListNode(5)
     print(Solution().reverseList(head))
+    print(Solution().reverseListRecursive(head))

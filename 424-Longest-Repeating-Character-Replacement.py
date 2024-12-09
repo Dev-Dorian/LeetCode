@@ -22,6 +22,7 @@ def characterReplacement1(s, k):
     end = 0
     maxC = 0
     while end < len(s):
+        # print(count.get(s[end], 0))
         count[s[end]] = 1 + count.get(s[end], 0)
         maxC = max(maxC, count[s[end]])
         while (end - start + 1) - maxC > k:
@@ -32,7 +33,7 @@ def characterReplacement1(s, k):
     return maxLength
 
 
-s = "ABAB"
+s = "ABABAB"
 k = 2
 
 print(characterReplacement(s, k))
