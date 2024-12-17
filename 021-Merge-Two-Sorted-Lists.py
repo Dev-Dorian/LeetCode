@@ -1,21 +1,40 @@
-def Merge_Two_Sorted_Lists():
-    test_list1 = [1, 5, 6, 9, 11]
-    test_list2 = [3, 4, 7, 8, 10, 15]
-    size_1 = len(test_list1)
-    size_2 = len(test_list2)
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
 
-    res = []
-    i, j = 0, 0
-
-    while i < size_1 and j < size_2:
-        if test_list1[i] < test_list2[j]:
-            res.append(test_list1[i])
-            i += 1
-        else:
-            res.append(test_list2[j])
-            j += 1
-    res = res + test_list1[i:] + test_list1[j:]
-    print("The List is : " + str(res))
+    def __repr__(self):
+        if self:
+            return "{} -> {}".format(self.val, repr(self.next))
 
 
-Merge_Two_Sorted_Lists()
+class Solution(object):
+    def Merge_Two_Sorted_Lists(self, list1, list2):
+
+        head = ListNode()
+        current = head
+        while list1 and list2:
+            if list1.val < list2.val:
+                current.next = list1
+                list1 = list1.next
+            else:
+                current.next = list2
+                list2 = list2.next
+            current = current.next
+        current.next = list1 or list2
+        return head.next
+
+
+if __name__ == "__main__":
+
+    list1 = ListNode(1)
+    list1.next = ListNode(3)
+    list1.next.next = ListNode(5)
+    list1.next.next.next = ListNode(6)
+    list1.next.next.next.next = ListNode(8)
+
+    list2 = ListNode(2)
+    list2.next = ListNode(3)
+    list2.next.next = ListNode(4)
+
+    print(Solution().Merge_Two_Sorted_Lists(list1, list2))

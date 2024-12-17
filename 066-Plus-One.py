@@ -12,5 +12,5 @@ def plusOne(digits):
     return digits
 
 
-digits = [9, 9, 9]
+digits = [1, 2, 3]
 print(plusOne(digits))

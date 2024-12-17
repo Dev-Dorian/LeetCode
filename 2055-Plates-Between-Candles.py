@@ -72,7 +72,37 @@ def platesBetweenCandles1(s, queries):
     return result
 
 
+def platesBetweenCandles2(s, queries):
+    n = len(s)
+    left = [-1] * n
+    right = [n]*n
+    stack = []
+# Encontrar la vela más cercana a la izquierda para cada posición
+    for i, c in enumerate(s):
+        if c == '|':
+            stack.append(i)
+        elif stack:
+            left[i] = stack[-1]
+# Encontrar la vela más cercana a la derecha para cada posición
+    stack = []
+    for i in range(n-1, -1, -1):
+        if s[i] == '|':
+            stack.append(i)
+        elif stack:
+            right[i] = stack[-1]
+  # Procesar las consultas
+    result = []
+    for l, r in queries:
+        count = 0
+        for i in range(l + 1, r):
+            if left[i] >= + l and right[i] <= r:
+                count += 1
+        result.append(count)
+    return result
+
+
 s = "**|**|***|"
 queries = [[2, 5], [5, 9]]
 print(platesBetweenCandles(s, queries))
 print(platesBetweenCandles1(s, queries))
+print(platesBetweenCandles2(s, queries))

@@ -41,8 +41,9 @@ class Solution(object):
             slow = slow.next
             fast = fast.next.next
 
-        prev = None
         act = slow.next  # Point to the first node of the second half
+        prev = None
+        slow.next = None
         # Don't detach the second half (correction)
         while act:
             tmp = act.next
@@ -62,6 +63,30 @@ class Solution(object):
 
         return head
 
+    def reorderList2(self, head):
+        if not head or not head.next:
+            return
+
+        slow, fast = head, head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+
+        prev, curr = None, slow
+        while curr:
+            next_node = curr.next
+            curr.next = prev
+            prev = curr
+            curr = next_node
+
+        first, second = head, prev
+        while second.next:
+            tmp1, tmp2 = first.next, second.next
+            first.next = second
+            second.next = tmp1
+            first, second = tmp1, tmp2
+        return head
+
 
 if __name__ == "__main__":
     head = ListNode(1)
@@ -69,4 +94,4 @@ if __name__ == "__main__":
     head.next.next = ListNode(3)
     head.next.next.next = ListNode(4)
     head.next.next.next.next = ListNode(5)
-    print(Solution().reorderList(head))
+    print(Solution().reorderList2(head))
