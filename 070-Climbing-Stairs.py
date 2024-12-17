@@ -20,7 +20,7 @@ def functionClimb1(n):
     b = 1
     c = 0
 
-    for i in range(1, n):
+    for _ in range(1, n):
         c = a + b
         b = a
         a = c
@@ -28,3 +28,19 @@ def functionClimb1(n):
 
 
 print(functionClimb1(3))
+
+
+def climbStairs(n):
+    if n == 1:
+        return 1
+    one_step = 1
+    two_steps = 1
+    total = 0
+    for index in range(2, n+1):
+        total = one_step + two_steps
+        two_steps = one_step
+        one_step = total
+    return total
+
+
+print(climbStairs(5))

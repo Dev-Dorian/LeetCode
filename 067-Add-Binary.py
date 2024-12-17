@@ -45,4 +45,4 @@ def addBinary2(a, b):
     return "{:b}".format(binary)
 
 
-# print(addBinary2("11", "1"))
+print(addBinary2("11", "1"))
