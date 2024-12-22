@@ -11,7 +11,7 @@ class ListNode:
 class Solution(object):
     def reorderList(self, head):
         slow = head
-        fast = head.next
+        # fast = head.next
         while fast and fast.next:
             slow = slow.next
             fast = fast.next.next
