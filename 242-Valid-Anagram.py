@@ -1,13 +1,13 @@
-def ValidAnagram(s, t):
+def isAnagram(s, t):
     s = s.lower()
     t = t.lower()
     return sorted(s) == sorted(t)
 
 
-print(ValidAnagram("roMa", "orma"))
+print(isAnagram("roMa", "orma"))
 
 
-def ValidAnagram1(s, t):
+def isAnagram1(s, t):
     s = s.lower()
     t = t.lower()
 
@@ -24,10 +24,10 @@ def ValidAnagram1(s, t):
     return True
 
 
-print(ValidAnagram1("ROMa", "roAm"))
+print(isAnagram1("ROMa", "roAm"))
 
 
-def ValidAnagram2(s, t):
+def isAnagram2(s, t):
     if len(s) != len(t):
         return False
     hashS = {}
@@ -43,4 +43,35 @@ def ValidAnagram2(s, t):
     return True
 
 
-print(ValidAnagram2("ROMa", "roAm"))
+print(isAnagram2("ROMa", "roAm"))
+
+
+def isAnagram3(s, t):
+    if len(s) != len(t):
+        return False
+    hashS = {}
+    hashT = {}
+
+    for i in range(len(s)):
+        hashS[s[i]] = hashS.get(s[i], 0) + 1
+
+    for i in range(len(t)):
+        hashT[t[i]] = hashT.get(t[i], 0) + 1
+
+    return hashS == hashT
+
+
+print(isAnagram3("rac", "car"))
+
+
+def isAnagram4(s, t):
+    ms = {}
+    mt = {}
+    for char in s:
+        ms[char] = ms.get(char, 0) + 1
+    for char in t:
+        mt[char] = mt.get(char, 0) + 1
+    return ms == mt
+
+
+print(isAnagram4("rac", "car"))
