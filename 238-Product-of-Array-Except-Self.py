@@ -22,6 +22,20 @@ def productArrayExceptSelf_1(nums):
     return ans
 
 
-nums = [1, 2, 3, 4]
+def productArrayExceptSelf_2(nums):
+    ans = len(nums)
+    products = [1] * ans
+    for i in range(1, ans):
+        products[i] = products[i-1] * nums[i-1]
+
+    right = nums[-1]
+    for i in range(ans-2, -1, -1):
+        products[i] *= right
+        right *= nums[i]
+    return products
+
+
+nums = [2, 3, 4, 5]
 print(productArrayExceptSelf(nums))
 print(productArrayExceptSelf_1(nums))
+print(productArrayExceptSelf_2(nums))
