@@ -14,4 +14,5 @@ def firstMissingPositive(nums):
 
 
 nums = [3, -1, 4, 1]
+# print(nums[nums[1] + 4])
 print(firstMissingPositive(nums))
