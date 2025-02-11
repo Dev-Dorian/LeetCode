@@ -12,6 +12,18 @@ class NumArray:
         return rightSum - leftSum
 
 
+def test(nums):
+    ans = []
+    cur = 0
+    for i in nums:
+        cur += i
+        ans.append(cur)
+    return ans
+
+
 nums = [1, 3, 5, 7, 9]
 result = NumArray(nums).sumRange(1, 3)
 print(result)
+
+
+print(test(nums))
