@@ -26,5 +26,5 @@ def lengthOfLongestSub1(s):
     return maxLenght
 
 
-print(lengthOfLongestSub("abcabcbb"))
+print(lengthOfLongestSub("ba"))
 print(lengthOfLongestSub1("abcabcbb"))
