@@ -8,7 +8,7 @@ def divideArray(nums):
     for n, cnt in count.items():
         if cnt % 2:
             return False
-    return True
+    return True, n
 
 
 def divideArray_1(nums):
@@ -22,5 +22,5 @@ def divideArray_1(nums):
     return len(odd_set) == 0
 
 
-nums = [3, 2, 3, 2, 2, 2, 5]
-print(divideArray_1(nums))
+nums = [3, 2, 3, 2, 2, 2]
+print(divideArray(nums))
