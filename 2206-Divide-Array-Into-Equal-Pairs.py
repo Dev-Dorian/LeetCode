@@ -8,7 +8,7 @@ def divideArray(nums):
     for n, cnt in count.items():
         if cnt % 2:
             return False
-    return True, n
+    return True
 
 
 def divideArray_1(nums):
@@ -24,3 +24,4 @@ def divideArray_1(nums):
 
 nums = [3, 2, 3, 2, 2, 2]
 print(divideArray(nums))
+print(divideArray_1(nums))
