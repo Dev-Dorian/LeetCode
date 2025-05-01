@@ -25,7 +25,7 @@ class TreeNode:
         self.right = right
 
 
-class Solution:
+class Solution():
     def preorderTraversal(self, root):
         ans = []
 
