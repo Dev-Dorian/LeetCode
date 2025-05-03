@@ -4,6 +4,7 @@ def canCompleteCircuit(gas, cost):
     totalGas = 0
 
     for index in range(len(gas)):
+        print(index)
         currentGas += gas[index] - cost[index]
         totalGas += gas[index] - cost[index]
         if currentGas < 0:
