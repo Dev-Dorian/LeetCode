@@ -4,17 +4,17 @@ class ListNode:
         self.next = None
 
 
-class Solution:
-    def getIntersectionNode(self, headA, headB):
+# class Solution:
+def getIntersectionNode(headA, headB):
 
-        res = set()
-        while headA != None:
-            res.add(headA)
-            headA = headA.next
-        while headB != None:
-            if headB in res:
-                return headB
-            headB = headB.next
+    res = set()
+    while headA != None:
+        res.add(headA)
+        headA = headA.next
+    while headB != None:
+        if headB in res:
+            return headB
+        headB = headB.next
 
 
 if __name__ == "__main__":
@@ -29,8 +29,15 @@ if __name__ == "__main__":
     listB.next.next = ListNode(1)
     listB.next.next.next = ListNode(8)
     listB.next.next.next.next = ListNode(4)
-    listB.next.next.next.next.next = ListNode(5)
+    listB.next.next.next.next.next = ListNode(5)\
 
-# listA = [4, 1, 8, 4, 5]
-# listB = [5, 6, 1, 8, 4, 5]
-    print(Solution().getIntersectionNode(listA, listB))
+    listB.next.next.next = listA.next.next
+
+    print(getIntersectionNode(listA, listB).val)
+    """ intersectionPoint = getIntersectionNode(listA, listB)
+
+    if intersectionPoint is None:
+        print("-1")
+    else:
+        print(intersectionPoint.val)
+ """
