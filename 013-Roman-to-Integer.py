@@ -9,7 +9,8 @@ def romanNumber(roman):
         "M": 1000
     }
     result = 0
-    roman = roman[::-1]
+    """ roman = roman[::-1]
+    print(roman)
 
     for number in roman:
         temp = diccionary[number]
@@ -17,6 +18,13 @@ def romanNumber(roman):
             result += temp
         else:
             result -= temp
+    return result """
+    for index in range(len(roman) - 1):
+        if diccionary[roman[index]] < diccionary[roman[index + 1]]:
+            result -= diccionary[roman[index]]
+        else:
+            result += diccionary[roman[index]]
+    # result += diccionary[roman[-1]]
     return result
 
 

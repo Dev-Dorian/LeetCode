@@ -23,5 +23,5 @@ def two_sum_1(nums, target):
                 return [start, end]
 
 
-print(two_sum([2, 7, 11, 15], 9))
+print(two_sum([11, 15, 4, 5], 9))
 print(two_sum_1([2, 7, 11, 15], 9))

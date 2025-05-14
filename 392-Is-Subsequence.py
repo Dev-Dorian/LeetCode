@@ -24,8 +24,21 @@ def isSubsequence_1(s, t):
     return True if i == len(s) else False
 
 
+def isSubsequence_2(s, t):
+    S = len(s)
+    T = len(t)
+    i = 0
+    j = 0
+    while i < S and j < T:
+        if s[i] == t[j]:
+            i += 1
+        j += 1
+    return True if i == S else False
+
+
 s = "abc"
-t = "ahbgd"
+t = "ahbgdc"
 
 print(isSubsequence(s, t))
 print(isSubsequence_1(s, t))
+print(isSubsequence_2(s, t))
