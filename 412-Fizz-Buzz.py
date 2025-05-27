@@ -30,7 +30,7 @@ def fizzBuzz1(n):
             print(numbers)
 
 
-# print(fizzBuzz1(15))
+print(fizzBuzz1(15))
 
 
 def is_valid_lat_lon(string):

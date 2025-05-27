@@ -1,4 +1,9 @@
-list = ["flopwer", "flop", "flopght", "floptad"]
+listArray = ["flopwer", "flop", "flopght", "floptad"]
+
+if "flop" in listArray:
+    print('yes')
+else:
+    print('no')
 
 
 def longest(strs):
@@ -6,15 +11,14 @@ def longest(strs):
     # print(prefix)
     for word in strs:
         while word.find(prefix) != 0:
-            # print(word.find(prefix))
+            print(word)
             prefix = prefix[:-1]
             if prefix == "":
-                print(prefix)
                 return ""
     return prefix
 
 
-print(longest(list))
+print(longest(listArray))
 
 
 def longestCommonPrefix(listing):
@@ -35,4 +39,4 @@ def longestCommonPrefix(listing):
     return lcp
 
 
-print(longestCommonPrefix(list))
+print(longestCommonPrefix(listArray))

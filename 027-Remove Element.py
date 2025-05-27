@@ -1,15 +1,16 @@
-list = [0, 1, 2, 2, 3, 0, 4, 2, 2, 54]
-value = 2
+list = [3, 2, 2, 3]
+value = 3
 
 
 def removeElement(array, val):
     l = 0
     for r in range(len(array)):
+        print(array[r])
         if array[r] != val:
             array[l] = array[r]
             l += 1
-            print(array[r])
-    return l
+            print(array[l])
+    # return l, array[r]
 
 
 print(removeElement(list, value))

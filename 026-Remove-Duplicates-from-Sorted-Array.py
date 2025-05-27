@@ -9,10 +9,10 @@ def removeDuplicates(nums):
             nums[l] = nums[r]
             l += 1
         # print(r)
-    return l
+    return l, nums
 
 
-list = [1, 3, 15, 64, 64, 2]
+list = [1, 1, 2]
 print(removeDuplicates(list))
 """
 
