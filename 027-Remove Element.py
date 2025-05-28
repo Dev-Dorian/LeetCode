@@ -10,7 +10,7 @@ def removeElement(array, val):
             array[l] = array[r]
             l += 1
             print(array[l])
-    # return l, array[r]
+    return l, array[r]
 
 
 print(removeElement(list, value))

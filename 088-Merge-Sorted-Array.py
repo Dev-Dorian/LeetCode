@@ -35,6 +35,7 @@ class Solution():
     def merget2(self, nums1, m, nums2, n):
         del nums1[m:]
         nums1.extend(nums2)
+        print(nums1)
         nums1.sort()
         return nums1
 
