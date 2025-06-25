@@ -1,12 +1,12 @@
-def hIndex1(citations):
+def hIndex(citations):
     c = sorted(citations)
-    hIndex = 0
+    h = 0
 
     for index in range(len(c)-1, -1, -1):
-        if c[index] > hIndex:
-            hIndex += 1
-    return hIndex
+        if c[index] > h:
+            h += 1
+    return h
 
 
 citations = [1, 8, 4, 5, 7]
-print(hIndex1(citations))
+print(hIndex(citations))
