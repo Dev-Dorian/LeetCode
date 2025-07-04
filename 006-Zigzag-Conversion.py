@@ -20,4 +20,4 @@ def convert(s, numRows):
 if __name__ == '__main__':
     # begin
     # s = Solution()
-    print(convert("HERMES", 3))
+    print(convert("PAYPALISHIRING", 3))
