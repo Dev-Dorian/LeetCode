@@ -1,7 +1,7 @@
 def solveSudoku(board):
     def is_valid(num, row, col):
         for index in range(9):
-            # print(board[3 * (row // 3) + index // 3])
+            # print(board[3 * (row // 3) + index // 3][3*(col // 3) + index % 3])
             if board[row][index] == num or board[index][col] == num or board[3 * (row // 3) + index // 3][3*(col // 3) + index % 3] == num:
                 return False
         return True
