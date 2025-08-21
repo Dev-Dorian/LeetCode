@@ -6,7 +6,7 @@ def numJewelsInStones(jewels, stones):
     return count
 
 
-jewels = "aA"
+JEWELS = "aA"
 stones = "aAAbbbb"
 
-print(numJewelsInStones(jewels, stones))
+print(numJewelsInStones(JEWELS, stones))
