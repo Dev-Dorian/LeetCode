@@ -13,4 +13,4 @@ def isPalindrome(s):
     return True
 
 
-print(isPalindrome("amatolo"))
+print(isPalindrome("race e car"))

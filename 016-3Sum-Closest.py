@@ -22,4 +22,4 @@ def threeSumClosest(nums, target):
     return closestNum
 
 
-print(threeSumClosest([-1, 2, 1, -4], 1))
+print(threeSumClosest([-1, 2, 1, 2], 5))
