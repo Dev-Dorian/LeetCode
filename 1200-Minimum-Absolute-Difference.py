@@ -3,7 +3,7 @@ import math
 
 def minimumAbsDifference(arr):
     arr.sort()
-    m = math.inf
+    m = float('inf')  # math.inf
     result = []
 
     for array in range(1, len(arr)):
