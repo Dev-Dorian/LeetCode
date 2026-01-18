@@ -24,8 +24,22 @@ def islandPerimeter(grid):
                 return dfs(r, c)
 
 
+def islandPerimeter_1(grid):
+    r, c, perimeter = len(grid), len(grid[0]), 0
+    for i in range(r):
+        for j in range(c):
+            if grid[i][j]:
+                perimeter += 4
+                if i and grid[i-1][j]:
+                    perimeter -= 2
+                if j and grid[i][j-1]:
+                    perimeter -= 2
+    return perimeter
+
+
 grid = [[0, 1, 0, 0],
         [1, 1, 1, 0],
         [0, 1, 0, 0],
         [1, 1, 0, 0]]
 print(islandPerimeter(grid))
+print(islandPerimeter_1(grid))
