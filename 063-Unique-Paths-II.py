@@ -19,7 +19,13 @@ def uniquePathsWithObstacles_1(obstacleGrid):
 
     for row in reversed(range(M)):
         for col in reversed(range(N)):
+            if obstacleGrid[row][col]:
+                dp[col] = 0
+            elif col + 1 < N:
+                dp[col] = dp[col] + dp[col + 1]
+    return dp[0]
 
 
 obstacleGrid = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]
 print(uniquePathsWithObstacles(obstacleGrid))
+print(uniquePathsWithObstacles_1(obstacleGrid))
