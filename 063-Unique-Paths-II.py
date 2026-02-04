@@ -12,5 +12,14 @@ def uniquePathsWithObstacles(obstacleGrid):
     return dfs(0, 0)
 
 
+def uniquePathsWithObstacles_1(obstacleGrid):
+    M, N = len(obstacleGrid), len(obstacleGrid[0])
+    dp = [0] * N
+    dp[N-1] = 1
+
+    for row in reversed(range(M)):
+        for col in reversed(range(N)):
+
+
 obstacleGrid = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]
 print(uniquePathsWithObstacles(obstacleGrid))
