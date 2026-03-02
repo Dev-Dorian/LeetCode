@@ -13,5 +13,5 @@ def canPartition(nums):
     return dp[target]
 
 
-nums = [1, 2, 5]
+nums = [1, 5, 11, 5]
 print(canPartition(nums))
