@@ -12,5 +12,5 @@ def nextPermutation(nums):
     return nums
 
 
-nums = [1, 2, 3]
+nums = [4, 1, 3, 2]
 print(nextPermutation(nums))
